@@ -1,0 +1,21 @@
+[package]
+name = "duelens"
+version = "0.1.0"
+edition = "2024"
+description = "Pick the good/bad exemplar pair that draws the sharpest decision boundary for a few-shot image decision API"
+readme = "README.md"
+keywords = ["few-shot", "exemplar-selection", "image", "decision-api", "auc"]
+categories = ["command-line-utilities", "computer-vision"]
+
+[dependencies]
+anyhow = "1.0.104"
+clap = { version = "4.6.7", features = ["derive"] }
+csv = "1.4.0"
+image = { version = "0.25.10", default-features = false, features = ["png", "jpeg", "webp", "bmp"] }
+rand = "0.10.3"
+rayon = "1.12.0"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+
+[dev-dependencies]
+tempfile = "3.27.0"
